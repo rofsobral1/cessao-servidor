@@ -23,4 +23,5 @@ export class AppComponent {
   opened = false;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+  panelOpenState = false;
 }
