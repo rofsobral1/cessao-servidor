@@ -14,7 +14,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule} from '@angular/material/list'
+import { MatListModule} from '@angular/material/list';
 
 import { HeaderModule } from './components/header/header.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
