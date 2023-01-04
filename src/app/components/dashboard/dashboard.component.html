@@ -1,65 +1,70 @@
 
 <app-header></app-header> 
 <app-menu></app-menu>
-<p>dashboard works!</p>
-<div class="painel-slide-bar">
-    Painel<br><br>
-    <mat-slide-toggle>Visão cessionário</mat-slide-toggle>
-  </div>
-  <div class="teste">
-    <div class="teste-2 mat-elevation-z4">
-      Solicitações de cessão cessionário<br> pendentes de autorização do dir. máx
-    <br>
-    <br>
-    <br>
-      <div class="iconeSolPendentes">
-        <img src="assets/images/iconeSolPendentes.jpg">
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <div class="painel-slide-bar">
+      Painel<br><br>
+      <mat-slide-toggle>Visão cessionário</mat-slide-toggle>
+    </div>
+    <div class="teste">
+      <div class="teste-2 mat-elevation-z4">
+        Solicitações de cessão cessionário<br> pendentes de autorização do dir. máx
+      <br>
+      <br>
+      <br>
+        <div>
+          <img src="assets/images/iconeSolPendentes.jpg">
+        </div>
+      </div>
+      <div class="teste-2 mat-elevation-z4">
+        Solicitações de cessão cessionário<br> em andamento
+        <div class="iconeCessaoAndamento">
+          <img src="assets/images/iconeCessaoAndamento.jpg">
+        </div>
+      </div>
+      <div class="teste-2 mat-elevation-z4">
+        Solicitações de cessão cessionário<br> finalizadas
+        <div class="iconeCessaoFinalizada">
+          <img src="assets/images/iconeCessaoFinalizada.jpg">
+        </div>
       </div>
     </div>
-    <div class="teste-2 mat-elevation-z4">
-      Solicitações de cessão cessionário<br> em andamento
-      <div class="iconeCessaoAndamento">
-        <img src="assets/images/iconeCessaoAndamento.jpg">
+    <div class="teste-3">
+      <div class="teste-4 mat-elevation-z4">
+        Solicitações de cessão cessionário em andamento-->
+          <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="position">
+              <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="weight">
+              <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="symbol">
+              <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+            </ng-container>
+          
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+      </div>
+      <div class="teste-4 mat-elevation-z4">
+        Solicitações de cessão cessionário
       </div>
     </div>
-    <div class="teste-2 mat-elevation-z4">
-      Solicitações de cessão cessionário<br> finalizadas
-      <div class="iconeCessaoFinalizada">
-        <img src="assets/images/iconeCessaoFinalizada.jpg">
-      </div>
-    </div>
-  </div>
-  <div class="teste-3">
-    <div class="teste-4 mat-elevation-z4">
-      Solicitações de cessão cessionário em andamento-->
-        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-          <ng-container matColumnDef="position">
-            <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-          </ng-container>
-        
-          <ng-container matColumnDef="name">
-            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-          </ng-container>
-        
-          <ng-container matColumnDef="weight">
-            <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-          </ng-container>
-        
-          <ng-container matColumnDef="symbol">
-            <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-          </ng-container>
-        
-          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-        </mat-table>
-    </div>
-    <div class="teste-4 mat-elevation-z4">
-      Solicitações de cessão cessionário
-    </div>
-  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+  
+
 
 
