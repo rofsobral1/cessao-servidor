@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 export interface PeriodicElement {
   name: string;
-  position: number;
+  position: string;
   weight: number;
   symbol: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 'Nome completo', name: 'Órgão xxx', weight: 46001.000811/2021-34, symbol: 'Em Andamento'},
+  {position: 'Nome completo', name: 'Órgão xxx', weight: 46001.000811/2021-34, symbol: 'Em Andamento'},
+  {position: 'Nome completo', name: 'Órgão xxx', weight: 46001.000811/2021-34, symbol: 'Em Andamento'},
 ];
 
 @Component({
