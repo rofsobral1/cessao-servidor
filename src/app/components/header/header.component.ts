@@ -12,6 +12,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  panelOpenState = false;
+ 
 
 }
